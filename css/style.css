@@ -1,0 +1,732 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #4a79c9;
+  padding: 8px 0;
+}
+
+.utility-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.utility-icons a {
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 5px;
+}
+
+.utility-icons a:hover {
+  color: #f0f0f0;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Header */
+.main-header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  margin: 0 12px;
+}
+
+.main-nav ul li a {
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+}
+
+.main-nav ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4a79c9;
+  transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover:after {
+  width: 100%;
+}
+
+/* Search Bar */
+.search-bar-container {
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar-container input {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.search-bar-container button {
+  background-color: #4a79c9;
+  color: white;
+  border: 2px solid #4a79c9;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-right: -1px;
+}
+
+.search-bar-container button:hover {
+  background-color: #3a69b9;
+  border-color: #3a69b9;
+  transform: scale(1.05);
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  background-color: #4a79c9;
+  padding: 15px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.welcome-banner h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  animation: fadeInOut 5s infinite alternate;
+  margin: 0;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+/* Sports Categories */
+.sports-categories {
+  padding: 20px 0;
+}
+
+.category-item {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+}
+
+.category-item img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-item h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Section Titles & Headers */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #444;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.featured-products .section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #4a79c9;
+}
+
+.section-header {
+  margin-bottom: 30px;
+}
+
+/* Gạch ngang bên trái cho các mục */
+.sports-shoes .section-title:before,
+.sports-accessories .section-title:before,
+.soccer-news .section-title:before,
+.sports-clothing .section-title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #4a79c9;
+  border-radius: 2px;
+  margin-left: -15px;
+}
+
+/* Featured Products */
+.featured-products {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.product-display {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Common Button Styles */
+.btn-primary {
+  background-color: #4a79c9;
+  border-color: #4a79c9;
+}
+
+.btn-primary:hover {
+  background-color: #3a69b9;
+  border-color: #3a69b9;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  background-color: #4a79c9;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+  background-color: #3a69b9;
+}
+
+.btn-buy {
+  background-color: #4a79c9;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  float: right;
+  margin-right: 2px;
+  margin-bottom: 10px;
+}
+
+.btn-buy:hover {
+  background-color: #3a69b9;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Product Styles */
+.product-card {
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.product-card.active {
+  border: 2px solid #4a79c9;
+}
+
+.product-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff5722;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.brand-logo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  max-width: 50px;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.logo-brand {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  padding: 15px 15px 45px 15px;
+  position: relative;
+}
+
+.product-title {
+  font-size: 16px;
+  margin: 15px 0 10px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.current-price {
+  color: #ff5722;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+/* View All Link */
+.view-all {
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.view-all:hover {
+  color: #4a79c9;
+}
+
+/* Banner Promo */
+.sports-uniform-promo {
+  background-color: #000;
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sports-uniform-promo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.promo-content {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+.promo-content .btn {
+  border-radius: 30px;
+  padding: 8px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #000;
+  color: #fff;
+}
+
+.promo-content .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Section Backgrounds */
+.sports-clothing, 
+.sports-shoes, 
+.soccer-news {
+  background-color: #f7f7f7;
+  padding: 40px 0;
+}
+
+.sports-accessories {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+.soccer-news {
+  border-top: 1px solid #eaeaea;
+}
+
+/* News Items */
+.news-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+}
+
+.news-image {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.news-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.news-item:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.news-info {
+  padding: 15px;
+}
+
+.news-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.news-source {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Club Logos */
+.club-logos {
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+  padding: 20px 0;
+}
+
+.club-logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.club-logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.club-logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.club-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+}
+
+footer h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer h4:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #4a79c9;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #4a79c9;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .header-content {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+  
+  .logo, .main-nav, .search-bar-container {
+    margin-bottom: 15px;
+  }
+  
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .club-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .utility-icons {
+    justify-content: center;
+  }
+  
+  .welcome-banner h2 {
+    font-size: 20px;
+  }
+  
+  .product-image {
+    height: 200px;
+  }
+  
+  .product-title {
+    font-size: 14px;
+  }
+  
+  .current-price {
+    font-size: 16px;
+  }
+  
+  .news-image img {
+    height: 180px;
+  }
+  
+  .news-title {
+    font-size: 15px;
+  }
+  
+  .club-logo {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .promo-content {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .btn-buy {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo img {
+    height: 50px;
+  }
+  
+  .main-nav ul li {
+    margin: 0 8px;
+  }
+  
+  .main-nav ul li a {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .view-all {
+    font-size: 14px;
+  }
+  
+  .product-image {
+    height: 180px;
+  }
+  
+  .product-title {
+    font-size: 14px;
+  }
+  
+  .product-badge {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  
+  .btn-buy {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .news-image img {
+    height: 160px;
+  }
+  
+  .news-title {
+    font-size: 14px;
+  }
+  
+  .club-logo {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  }
+  
+  .promo-content {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .product-info {
+    padding: 15px 15px 40px 15px;
+  }
+}
